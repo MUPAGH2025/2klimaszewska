@@ -7,7 +7,7 @@ jobs:
       - run: sudo apt-get update
       - run: sudo apt-get install texlive-xetex inkscape pandoc
       - uses: actions/checkout@v4
-      - run: pip install  open-atmos-jupyter-utils scipy nbconvert ipykernel pympdata numba 
+      - run: pip install  open-atmos-jupyter-utils scipy nbconvert ipykernel pympdata numba pint
       - run: python -m nbconvert --to pdf --execute projekt_shallow_water.ipynb --output projekt1.pdf 
       - uses: actions/upload-artifact@v4 
         with:
